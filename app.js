@@ -11,13 +11,6 @@ import articleRoutes from "./src/routes/article.routes.js";
 import articleTagRoutes from "./src/routes/articletag.routes.js";
 import tagRoutes from "./src/routes/tag.routes.js";
 
-// Modelos
-import User from "./src/models/user.model.js";
-import Profile from "./src/models/profile.model.js";
-import Article from "./src/models/article.model.js";
-import Tag from "./src/models/tag.model.js";
-import ArticleTag from "./src/models/articletag.model.js";
-
 // Relaciones
 import "./src/models/associations.js"; // donde definís User↔Profile y Article↔Tag
 
