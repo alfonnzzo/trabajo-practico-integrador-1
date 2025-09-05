@@ -2,7 +2,7 @@ import { Router } from "express";
 import {
   createUser,
   getAllUsers,
-  getUserByPk,
+  getUserById,
   updateUser,
   deleteUser,
 } from "../controllers/user.controller.js";
@@ -15,7 +15,7 @@ const userRoutes = Router();
 // todas estas rutas protegidas para admin
 userRoutes.post("/", authMiddleware, adminMiddleware, createUser);
 userRoutes.get("/", authMiddleware, adminMiddleware, getAllUsers);
-userRoutes.get("/:id", authMiddleware, adminMiddleware, getUserByPk);
+userRoutes.get("/:id", authMiddleware, adminMiddleware, getUserById);
 userRoutes.put("/:id", authMiddleware, adminMiddleware, updateUser);
 userRoutes.delete("/:id", authMiddleware, adminMiddleware, deleteUser);
 

@@ -1,8 +1,8 @@
-import User from "./user.model";
-import Profile from "./profile.model";
-import Article from "./article.model";
-import Tag from "./tag.model";
-import articleTag from "./articletag.model";
+import User from "../models/user.model.js";
+import Profile from "../models/profile.model.js";
+import Article from "../models/article.model.js";
+import Tag from "../models/tag.model.js";
+import articleTag from "../models/articletag.model.js";
 
 User.hasOne(Profile, {
   foreignKey: "user_id",

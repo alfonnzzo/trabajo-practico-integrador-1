@@ -1,5 +1,5 @@
-const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('sqlite::memory:');
+import sequelize from "../config/database.js";
+import { DataTypes } from "sequelize";
 
 const Article = sequelize.define(
   'Article',
@@ -9,7 +9,7 @@ const Article = sequelize.define(
       allowNull: false,
     },
     content: {
-      type: DataTypes.TEXT(50),
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     excerpt: { type: DataTypes.STRING(500) },
